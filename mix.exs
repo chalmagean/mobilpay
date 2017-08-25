@@ -8,7 +8,17 @@ defmodule Mobilpay.Mixfile do
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env),
       start_permanent: Mix.env == :prod,
-      deps: deps()
+      deps: deps(),
+      package: [
+        maintainers: ["Cezar Halmagean"],
+        licenses: ["MIT"],
+        links: %{
+          "GitHub" => "https://github.com/chalmagean/mobilpay"
+        }
+      ],
+      description: """
+      Elixir API client for Mobilpay
+      """
     ]
   end
 
