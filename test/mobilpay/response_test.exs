@@ -15,11 +15,10 @@ defmodule Mobilpay.ResponseTest do
   test "parse/1 failed" do
     response =
       :code.priv_dir(:mobilpay)
-      |> Path.join("response_failed.xml")
+      |> Path.join("response_insuficient_funds.xml")
       |> File.read!
       |> Response.parse
 
-    assert response == {:error, 20, "Failed", "sometoken"}
+    assert response == {:error, 20, "Insuficient Funds", "sometoken"}
   end
 end
-

@@ -37,8 +37,9 @@
     <pan_masked>9****5098</pan_masked>
     <payment_instrument_id>15966</payment_instrument_id>
     <installments>1</installments>
-    <error code="20"><![CDATA[Failed]]></error>
+    <error code="20"><![CDATA[Insuficient Funds]]></error>
   </mobilpay>
 </order>
+
 
 
