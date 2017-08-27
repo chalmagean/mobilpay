@@ -1,17 +1,25 @@
 defmodule Mobilpay.ResponseTest do
   use ExUnit.Case
-  import Mobilpay.Fixtures
-
   alias Mobilpay.Response
 
   test "parse/1 confirmed" do
-    xml = fixture(:xml_response, :confirmed)
-    assert Response.parse(xml) == {:ok, "sometoken"}
+    response =
+      :code.priv_dir(:mobilpay)
+      |> Path.join("response_confirmed.xml")
+      |> File.read!
+      |> Response.parse
+
+    assert response == {:ok, "sometoken"}
   end
 
   test "parse/1 failed" do
-    xml = fixture(:xml_response, :failed)
-    assert Response.parse(xml) == {:error, 20, "Failed", "sometoken"}
+    response =
+      :code.priv_dir(:mobilpay)
+      |> Path.join("response_failed.xml")
+      |> File.read!
+      |> Response.parse
+
+    assert response == {:error, 20, "Failed", "sometoken"}
   end
 end
 
