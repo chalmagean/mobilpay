@@ -1,3 +1,3 @@
 # Mobilpay
 
-Communication with the Mobilpay API.
+Communication with the Mobilpay (www.mobilpay.ro) API.
