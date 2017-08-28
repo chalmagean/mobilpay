@@ -38,7 +38,8 @@ defmodule Mobilpay.Mixfile do
     [
       {:xml_builder, "~> 0.1.1"},
       {:sweet_xml, "~> 0.6"},
-      {:timex, "~> 3.1"}
+      {:timex, "~> 3.1"},
+      {:dialyxir, "~> 0.5", only: [:dev], runtime: false}
     ]
   end
 end

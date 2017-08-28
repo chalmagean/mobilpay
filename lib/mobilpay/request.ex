@@ -6,6 +6,10 @@ defmodule Mobilpay.Request do
 
   alias Mobilpay.Payment
 
+  @doc """
+  Generates an XML string from a Payment struct.
+  """
+  @spec create(Payment.t) :: String.t
   def create(%Payment{} = payment) do
     datetime = Timex.now
     timestamp = Timex.format!(datetime, "%Y%m%d%H%M", :strftime)

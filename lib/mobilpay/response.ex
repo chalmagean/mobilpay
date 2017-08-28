@@ -4,6 +4,7 @@ defmodule Mobilpay.Response do
   """
   import SweetXml
 
+  @spec parse(String.t) :: {atom, String.t} | {atom, String.t, String.t, String.t}
   def parse(xml) do
     result = parse_xml(xml)
 
@@ -22,5 +23,4 @@ defmodule Mobilpay.Response do
       token: ~x"./@id"s
     )
   end
-
 end
