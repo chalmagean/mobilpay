@@ -4,6 +4,7 @@ defmodule Mobilpay.Mixfile do
   def project do
     [
       app: :mobilpay,
+      name: "Mobilpay",
       version: "0.1.0",
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env),
@@ -17,7 +18,7 @@ defmodule Mobilpay.Mixfile do
         }
       ],
       description: """
-      Elixir API client for Mobilpay
+      Elixir API client for Mobilpay (www.mobilpay.ro).
       """
     ]
   end
@@ -39,7 +40,8 @@ defmodule Mobilpay.Mixfile do
       {:xml_builder, "~> 0.1.1"},
       {:sweet_xml, "~> 0.6"},
       {:timex, "~> 3.1"},
-      {:dialyxir, "~> 0.5", only: [:dev], runtime: false}
+      {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 end
