@@ -12,14 +12,6 @@ defmodule Mobilpay.Payment do
     address: "",
     mobile_phone: "",
     confirm_url: "",
-    return_url: "",
+    return_url: ""
   ]
-
-  @type t :: %__MODULE__{}
-
-  @doc """
-  Returns the default Payment struct
-  """
-  @spec new() :: t
-  def new(), do: %__MODULE__{}
 end
