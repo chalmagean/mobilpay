@@ -11,6 +11,12 @@ use Mix.Config
 # You can configure your application as:
 #
 #     config :mobilpay, key: :value
+
+config :mobilpay,
+  url: "http://sandboxsecure.mobilpay.ro",
+  prv_key: "test_prv.key",
+  pub_key: "test_pub.pem"
+
 #
 # and access this configuration in your application as:
 #
